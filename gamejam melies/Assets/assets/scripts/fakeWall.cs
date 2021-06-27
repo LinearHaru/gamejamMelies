@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class fakeWall : MonoBehaviour
 {
-    [SerializeField]private GameObject spriteMask;
+    private Animator anim;
+
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            spriteMask.SetActive(true);
+            anim.SetTrigger("FadeIn");
         }
     }
 
@@ -18,7 +23,7 @@ public class fakeWall : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            spriteMask.SetActive(false);
+            anim.SetTrigger("FadeOut");
         }
     }
 }

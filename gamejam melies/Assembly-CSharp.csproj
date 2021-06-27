@@ -58,10 +58,10 @@
   <ItemGroup>
     <Compile Include="Assets\assets\scripts\playerMovement.cs" />
     <Compile Include="Assets\assets\scripts\particleDestroy.cs" />
-    <Compile Include="Assets\assets\scripts\particleSpawner.cs" />
-    <Compile Include="Assets\assets\scripts\fakeWall.cs" />
-    <Compile Include="Assets\assets\scripts\levelChanger.cs" />
     <Compile Include="Assets\assets\scripts\toNextLevel.cs" />
+    <Compile Include="Assets\assets\scripts\particleSpawner.cs" />
+    <Compile Include="Assets\assets\scripts\levelChanger.cs" />
+    <Compile Include="Assets\assets\scripts\fakeWall.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
