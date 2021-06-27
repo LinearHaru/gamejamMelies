@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637604263189054262
+      ticks: 637604305734822944
     m_Hash: 2401379241
   m_LockFileStatus:
     m_FilePath: C:/Users/bruno/OneDrive/Documentos/GitHub/gamejamMelies/gamejam melies/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637604263189072468
+      ticks: 637604305734838019
     m_Hash: 2463339971
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
