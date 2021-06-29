@@ -20496,7 +20496,6 @@ GameObject:
   - component: {fileID: 1147691668}
   - component: {fileID: 1147691667}
   - component: {fileID: 1147691666}
-  - component: {fileID: 1147691669}
   - component: {fileID: 1147691670}
   m_Layer: 0
   m_Name: Main Camera
@@ -20570,40 +20569,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1147691669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1147691665}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShowDebugText: 0
-  m_ShowCameraFrustum: 1
-  m_IgnoreTimeScale: 0
-  m_WorldUpOverride: {fileID: 0}
-  m_UpdateMethod: 2
-  m_BlendUpdateMethod: 1
-  m_DefaultBlend:
-    m_Style: 1
-    m_Time: 2
-    m_CustomCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-  m_CustomBlends: {fileID: 11400000, guid: f7a7ed9174b41d449b8ed57e253721ed, type: 2}
-  m_CameraCutEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_CameraActivatedEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1147691670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20645,7 +20610,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1171348981}
-  - component: {fileID: 1171348980}
   - component: {fileID: 1171348979}
   - component: {fileID: 1171348978}
   m_Layer: 0
@@ -20686,63 +20650,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1171348980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1171348977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 325a6a3050a061e4b8aa51386c30e8e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ExcludedPropertiesInInspector:
-  - m_Script
-  m_LockStageInInspector: 
-  m_StreamingVersion: 20170927
-  m_Priority: 10
-  m_StandbyUpdate: 2
-  m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
-  m_AnimatedTarget: {fileID: 1171348979}
-  m_LayerIndex: 0
-  m_ShowDebugText: 0
-  m_ChildCameras:
-  - {fileID: 2094224967}
-  - {fileID: 2017119938}
-  - {fileID: 38109799}
-  m_Instructions:
-  - m_FullHash: -1257979424
-    m_VirtualCamera: {fileID: 2017119938}
-    m_ActivateAfter: 0
-    m_MinDuration: 0
-  - m_FullHash: 739086426
-    m_VirtualCamera: {fileID: 2094224967}
-    m_ActivateAfter: 0
-    m_MinDuration: 0
-  - m_FullHash: 1527423180
-    m_VirtualCamera: {fileID: 38109799}
-    m_ActivateAfter: 0
-    m_MinDuration: 0
-  m_DefaultBlend:
-    m_Style: 1
-    m_Time: 0.5
-    m_CustomCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-  m_CustomBlends: {fileID: 0}
-  m_ParentHash:
-  - m_Hash: -1257979424
-    m_ParentHash: 756556552
-  - m_Hash: 739086426
-    m_ParentHash: 756556552
-  - m_Hash: 1527423180
-    m_ParentHash: 756556552
 --- !u!4 &1171348981
 Transform:
   m_ObjectHideFlags: 0
