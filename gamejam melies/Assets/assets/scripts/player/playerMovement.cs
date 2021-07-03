@@ -5,23 +5,23 @@ public class playerMovement : MonoBehaviour
 {
 
     public float speed = 4;
-    public float jumpforce = 10;
+    public float jumpheight = 5;
     public Transform groundCheck;
     public LayerMask whatIsGround;
-    [HideInInspector]
     public bool lookingRight = true;
 
-    private Rigidbody2D rdbd;
-    //private Animator anim;
+    public Rigidbody2D rdbd;
+    private Animator anim;
     public bool crouching = false;
     public bool onGround = true;
     public bool wasOnGround = true;
+    public float jumpTimer=0;
 
     // Use this for initialization
     void Start()
     {
         rdbd = GetComponent<Rigidbody2D>();
-        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -32,6 +32,8 @@ public class playerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (jumpTimer > 0) jumpTimer -= 1;
+
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
         if (v < -.05)
@@ -39,8 +41,14 @@ public class playerMovement : MonoBehaviour
         else
             crouching = false;
 
-        if ((v > 0 || Input.GetButton("Jump")) && onGround)
-            rdbd.velocity = new Vector2(rdbd.velocity.x,jumpforce * Time.fixedDeltaTime);
+        if (Input.GetButton("Jump") && onGround)
+        {
+            jumpTimer = 10;
+            rdbd.velocity = new Vector2(rdbd.velocity.x, jumpheight * 1f * rdbd.gravityScale);
+        }
+        else if(onGround)
+            rdbd.velocity = new Vector2(rdbd.velocity.x, rdbd.velocity.y-2f * Time.fixedDeltaTime);
+
 
 
         rdbd.velocity = new Vector2(h * speed * Time.fixedDeltaTime, rdbd.velocity.y);
@@ -50,9 +58,9 @@ public class playerMovement : MonoBehaviour
         if ((h > 0 && !lookingRight) || (h < 0 && lookingRight))
             Flip();
 
-        //anim.SetFloat("velocityX", Mathf.Abs(h));
-        //anim.SetFloat("velocityY", rdbd.velocity.y);
-        //anim.SetBool("ground", onGround);
+        anim.SetFloat("velocityX", Mathf.Abs(h));
+        anim.SetFloat("velocityY", rdbd.velocity.y);
+        anim.SetBool("ground", onGround);
         //anim.SetBool("crouching", crouching);
 
     }
